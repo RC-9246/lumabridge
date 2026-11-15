@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.test-build/
+coverage/
+.env
+.env.*
+!.env.example
+*.local.json
+*.log
+data/
+artifacts/
+.DS_Store

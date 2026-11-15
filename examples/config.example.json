@@ -1,0 +1,7 @@
+{
+  "backend": {
+    "url": "http://127.0.0.1:3000",
+    "tokenEnv": "LUMABRIDGE_BACKEND_TOKEN"
+  },
+  "timeoutMs": 5000
+}

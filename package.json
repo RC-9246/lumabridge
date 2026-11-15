@@ -1,0 +1,36 @@
+{
+  "name": "@rc-9246/lumabridge",
+  "version": "0.1.0-alpha.0",
+  "private": true,
+  "description": "An independent QQ compatibility core with replaceable backends and explicit delivery semantics.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RC-9246/lumabridge.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "lumabridge": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test .test-build/test/*.test.js",
+    "check": "pnpm typecheck && pnpm test",
+    "doctor": "pnpm build && node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3"
+  }
+}
